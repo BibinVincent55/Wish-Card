@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onam Wish Card Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .card {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .generate-button {
+            background-color: #ff7f50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://previews.123rf.com/images/premiumstock/premiumstock1907/premiumstock190700025/127584133-vector-illustration-of-happy-onam-festival-background-of-kerala-with-king-mahabali.jpg" alt="Onam Festival">
+        <div class="message">
+            <p>Wishing you a joyous and prosperous Onam!</p>
+        </div>
+    </div>
+    <button class="generate-button" onclick="generateWishCard()">Generate New Card</button>
+
+    <script>
+        function generateWishCard() {
+            const newMessage = "Happy Onam! May this festival bring you happiness and prosperity.";
+            const newImageSource = "https://images.news18.com/ibnlive/uploads/2022/08/onam-history-16615028614x3.jpg";
+            const card = document.querySelector('.card');
+            const message = document.querySelector('.message');
+            const image = card.querySelector('img');
+            message.innerHTML = `<p>${newMessage}</p>`;
+            image.src = newImageSource;
+        }
+    </script>
+</body>
+</html>
